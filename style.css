@@ -1,120 +1,152 @@
- /*------------
+
+/*------------
   google-font
   -------------- */
  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
  /*----------
   base style 
   ------------*/
-  body{
-   font-family: 'Poppins', sans-serif;
-  }
-    
-  main{
-      position: absolute;
-      width: 1440px;
-      height: 3750px;
-      background-color: white;
-  }
+ body {
+     font-family: 'Poppins', sans-serif;
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+ }
 
-   /*-------------------
+
+ /*-------------------
     header section
     --------------------- */
 
-   .header-section{
-    display: flex;
-    background-color:darksalmon;
-    height: 550px;
-    
-   }
-   .half-width{
-       width:100%;
+ .header-section {
+     display: flex;
+     background-color: darksalmon;
+     height: 550px;
 
-   padding-left: 15%;
-   margin-top: 100px;
-   color: white;
-    
-   }
-   .half-width img{
-       position: absolute;
-       width: 556px;
-       height: 438px;
-       right: 300px;
-       top: 50px;
-   }
-   .button {
-    text-decoration: none;
-    background-color:#E02C6D ;
-    padding: 10px 40px;
-    border-radius: 10px;
-   color: white;
-   }
-  .button:hover{
-       background-color: rgb(134, 248, 248);
-       transition: 2s ease-in-out;
-   } 
-   
-   
-   /*---------------------
+ }
+
+ .half-width {
+     width: 40%;
+     padding-left: 15%;
+     margin-top: 100px;
+     color: white;
+
+ }
+
+ .half-width img {
+     height: 400px;
+     width: 400px;
+ }
+
+ .button {
+     text-decoration: none;
+     background-color: #E02C6D;
+     padding: 10px 40px;
+     border-radius: 10px;
+     color: white;
+ }
+
+ .button:hover {
+     background-color: rgb(134, 248, 248);
+     transition: 2s ease-in-out;
+ }
+
+
+ /*---------------------
     conteiner section
     --------------------- */
-   .conteiner .player{
-    background-color: white;
-    box-shadow: 0px 0px 20px;
-    padding: 60px ;
-    
-   }
-    .players{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-column-gap:24px;
-        grid-row-gap:24px;
-        padding: 20px; 
-      
-    }
-    
-    .player img{
-        width: 330px;
-        height: 470px;
-    }
-    
-    .title ,.blog{
-        margin: 50px;
-        justify-content: center;
-        align-items: center;
-    }
-     /*-------------
+ .conteiner .player {
+     background-color: white;
+     box-shadow: 0px 0px 20px;
+     padding: 60px;
+
+ }
+
+ .players {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-column-gap: 24px;
+     grid-row-gap: 24px;
+     padding: 20px;
+
+ }
+
+ .player img {
+     width: 330px;
+     height: 470px;
+ }
+
+ .title,
+ .blog {
+     margin: 50px;
+     justify-content: center;
+     align-items: center;
+ }
+
+ /*-------------
       iframe section
       ---------------- */
-    .add-content .heading{
-        text-decoration: none;
-    }
-    .add-content a:hover{
-        background-color: lightgray;
-        transition: 2s;
-        border-radius: 5px;
-    }
+ .add-content .heading {
+     text-decoration: none;
+ }
+
+ .add-content a:hover {
+     background-color: lightgray;
+     transition: 2s;
+     border-radius: 5px;
+ }
 
 
-    /*---------------
+ /*---------------
      footer section
      ----------------- */
-      
-    
-    .image-logo, .font ,.icon{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0px;
-    }
-    .image-logo img{
-        width: 483px;
-        height: 213px;
-    }
-    .font a{
-        padding: 5px;
-    }
-   /*------------------
+
+
+ .image-logo,
+ .font,
+ .icon {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 0px;
+ }
+
+ .image-logo img {
+     width: 483px;
+     height: 213px;
+ }
+
+ .font a {
+     padding: 5px;
+ }
+
+ /*------------------
      media query for 
     mobail divices
     --------------------- */
- 
+
+    @media only screen and (max-width:678px) {
+        .header-section {
+            width: 100%;
+            display: inline-block;
+            background-color: darksalmon;
+        }
+        .half-width {
+            width: 100%;
+            color: white;
+        }
+        .half-width img {
+            height: 200px;
+            width: 200px;
+        }
+
+        .players {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-column-gap: 24px;
+            grid-row-gap: 24px;
+            padding: 20px;
+       
+        }
+    }
